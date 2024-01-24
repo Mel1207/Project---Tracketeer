@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  background: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #1F50FF;
+  color: #fff;
+}
+
+.btn-secondary {
+  color: #9F9F9F;
+  border: 1px solid #9F9F9F;
+}
+
+.modal {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .modal-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px 20px;
+  width: 420px;
+}
+.modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.modal .modal-close {
+  cursor: pointer;
+}
+.modal .modal-content {
+  margin-bottom: 50px;
+}
+.modal .modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-savings {
+  height: 200px;
+  width: 100%;
+  padding: 25px 15px;
+  background: url("../assets/bg-savings.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-savings h2 {
+  font-size: 30px;
+}
+
+.card-expense {
+  height: 200px;
+  width: 100%;
+  padding: 25px 15px;
+  background: url("../assets/bg-expense.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-expense h2 {
+  font-size: 30px;
+}
+
+.card-income {
+  height: 200px;
+  width: 100%;
+  padding: 20px 15px;
+  background: url("../assets/bg-income.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-income h2 {
+  font-size: 30px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  height: 40px;
+}
+input:placeholder, select:placeholder {
+  font-size: 12px;
+}
+
+select {
+  background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat !important;
+  background-position: calc(100% - 0.75rem) center !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  padding-right: 2rem !important;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+.form-group p {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.navbar {
+  padding-left: 280px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.navbar .navbar-container {
+  padding: 0 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .hamburger {
+  cursor: pointer;
+}
+.navbar .user-account {
+  display: flex;
+  gap: 10px;
+}
+.navbar .user-avatar {
+  height: 40px;
+  width: 40px;
+  background: #1F50FF;
+  color: #fff;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .user-details p {
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.navbar .user-details a {
+  color: #1F50FF;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 280px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #F9FCFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar .sidebar-logo-link {
+  height: 50px;
+  display: block;
+  margin-bottom: 65px;
+}
+.sidebar .link-item {
+  padding: 11px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.sidebar .link-item:hover {
+  background: #1F50FF;
+}
+.sidebar .link-item:hover .sidebar-link {
+  color: #fff !important;
+}
+.sidebar .link-item.active {
+  background: #1F50FF;
+}
+.sidebar .sidebar-link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #1E1E1E;
+  font-weight: 600;
+}
+.sidebar .account-directory {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+}
+.sidebar .account-directory .account-content {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.sidebar .account-directory .user-avatar {
+  height: 40px;
+  width: 40px;
+  background: #1F50FF;
+  color: #fff;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar .account-directory .account-details p {
+  font-weight: 600;
+}
+.sidebar .account-directory .account-details span {
+  color: #1F50FF;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app, #app {
+  position: relative;
+}
+
+body {
+  color: #1E1E1E;
+  background: #F9FCFF;
+}
+
+main {
+  padding-left: 280px;
+  margin-top: 40px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.card-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/*# sourceMappingURL=main.css.map */

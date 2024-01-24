@@ -1,0 +1,81 @@
+.sidebar 
+  height: 100vh
+  width: 280px
+  border-right: 1px solid rgba($cBlack, .10)
+  padding: 20px 15px
+  position: fixed 
+  top: 0
+  left: 0
+  background: $bg-primary
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+  .sidebar-logo-link 
+    height: 50px
+    display: block
+    margin-bottom: 65px
+
+  // .sidebar-links 
+
+  .link-item 
+    padding: 11px
+    border-radius: 5px
+    margin-bottom: 8px
+    background: transparent
+    transition: all 0.3s ease
+
+    &:hover
+      background: $cBlue
+      
+      .sidebar-link 
+        color: $cWhite !important
+
+  .link-item.active
+    background: $cBlue
+
+  .sidebar-link 
+    display: flex
+    gap: 10px
+    align-items: center
+    color: $cBlack10
+    font-weight: 600
+    
+  // ACCOUNT DIRECTORY
+  .account-directory 
+    width: 100%
+    border: 1px solid rgba($cBlack, .10)
+    border-radius: 10px
+    background: $cWhite
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px 12px
+
+    .account-content
+      display: flex 
+      gap: 10px
+      align-items: center
+
+    .user-avatar 
+      height: 40px
+      width: 40px
+      background: $cBlue
+      color: $cWhite
+      border-radius: 50px
+      display: flex 
+      justify-content: center
+      align-items: center
+
+    .account-details 
+      p
+        font-weight: 600 
+
+      span 
+        color: $cBlue
+        font-weight: 700
+        font-size: 12px
+      
+
+  
