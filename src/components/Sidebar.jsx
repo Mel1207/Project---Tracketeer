@@ -2,6 +2,8 @@ import React from 'react'
 import logoMain from '../assets/logo-main.png'
 import iconLogOut from '../assets/icon-logout.svg'
 import { sidebarLinks } from '../constants'
+import { NavLink } from 'react-router-dom'
+
 
 const Sidebar = () => {
   return (
@@ -15,10 +17,10 @@ const Sidebar = () => {
         <ul className='sidebar-links'>
           {sidebarLinks.map(link => (
             <li key={link.id} className='link-item'>
-              <a href={link.linkPath} className='sidebar-link'>
+              <NavLink to={link.linkPath} className='sidebar-link'>
                 <img src={link.iconSrc} alt={link.title} />
                 {link.title}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>

@@ -1,5 +1,6 @@
 import React from 'react'
 import iconHamburger from '../assets/icon-hamburger.svg'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -11,7 +12,7 @@ const Navbar = () => {
           <div className='user-avatar'>M</div>
           <div className='user-details'>
             <p>Mel John</p>
-            <a href="#!">Profile</a>
+            <NavLink to="/profile">Profile</NavLink>
           </div>
         </div>
       </div>

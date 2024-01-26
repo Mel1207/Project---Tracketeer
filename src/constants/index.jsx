@@ -9,7 +9,7 @@ export const sidebarLinks = [
     title: 'Dashboard',
     isActive: true,
     iconSrc: iconHome,
-    linkPath: '/'
+    linkPath: '/dashboard'
   },
   {
     id: 2,
