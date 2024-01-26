@@ -24,6 +24,48 @@ body {
   border: 1px solid #9F9F9F;
 }
 
+.google-login {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.login-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+.login-page .login-left {
+  width: 50%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+.login-page .login-right {
+  width: 50%;
+  height: 100vh;
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-page h1 {
+  font-size: 18px;
+  font-weight: 800;
+}
+.login-page .login-container {
+  max-width: 380px;
+}
+.login-page .login-logo {
+  margin-left: -10px;
+}
+
 .modal {
   height: 100vh;
   width: 100%;
@@ -297,6 +339,15 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 600px) {
+  .login-page .login-left {
+    display: none;
+  }
+  .login-page .login-right {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
