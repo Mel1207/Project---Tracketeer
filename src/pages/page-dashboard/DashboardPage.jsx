@@ -24,9 +24,10 @@ const DashboardPage = () => {
 
           <div className="tables">
             <div className="table-transaction">
-              
+              <p>All Transactions</p>
             </div>
             <div className="table-notification">
+              <p>All Notification</p>
 
             </div>
           </div>

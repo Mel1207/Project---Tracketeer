@@ -153,6 +153,35 @@ body {
   font-size: 30px;
 }
 
+.tables {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  height: 500px;
+  gap: 20px;
+}
+.tables .table-transaction {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+.tables .table-transaction p {
+  font-weight: 700;
+}
+.tables .table-notification {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+.tables .table-notification p {
+  font-weight: 700;
+}
+
 input, select {
   width: 100%;
   padding: 10px 12px;
@@ -339,6 +368,7 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 600px) {
