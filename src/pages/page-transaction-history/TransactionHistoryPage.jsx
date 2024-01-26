@@ -1,8 +1,19 @@
 import React from 'react'
+import Navbar from '../../components/Navbar'
+import Sidebar from '../../components/Sidebar'
 
 const TransactionHistoryPage = () => {
   return (
-    <div>TransactionHistoryPage</div>
+    <>
+      <Navbar />
+      <Sidebar />
+      <main>
+        <div className='container'>
+          TransactionHistoryPage
+        </div>
+      </main>
+    </>
+    
   )
 }
 

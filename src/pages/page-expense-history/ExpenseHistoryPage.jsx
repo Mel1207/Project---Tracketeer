@@ -1,8 +1,18 @@
 import React from 'react'
+import Navbar from '../../components/Navbar'
+import Sidebar from '../../components/Sidebar'
 
 const ExpenseHistoryPage = () => {
   return (
-    <div>ExpenseHistoryPage</div>
+    <>
+      <Navbar />
+      <Sidebar />
+      <main>
+        <div className='container'>
+          Expense History
+        </div>
+      </main>
+    </>
   )
 }
 

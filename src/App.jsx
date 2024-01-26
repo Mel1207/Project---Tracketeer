@@ -13,20 +13,14 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Navbar />
-        <Sidebar />
-        <main>
-          <div className="container">
-            <Routes>
-              <Route path="/" exact element={<Auth />}/>
-              <Route path="/dashboard" element={<DashboardPage />} />
-              <Route path="/transaction-history" element={<TransactionHistoryPage />}/>
-              <Route path="/income-history" element={<IncomeHistoryPage />}/>
-              <Route path="/expense-history" element={<ExpenseHistoryPage />}/>
-              <Route path="/profile" element={<ProfilePage />}/>
-            </Routes>
-          </div>
-        </main>
+        <Routes>
+          <Route path="/" exact element={<Auth />}/>
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/transaction-history" element={<TransactionHistoryPage />}/>
+          <Route path="/income-history" element={<IncomeHistoryPage />}/>
+          <Route path="/expense-history" element={<ExpenseHistoryPage />}/>
+          <Route path="/profile" element={<ProfilePage />}/>
+        </Routes>
       </div>
     </Router>
   )

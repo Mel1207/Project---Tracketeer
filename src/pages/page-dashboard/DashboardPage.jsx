@@ -11,21 +11,27 @@ import IncomeCard from '../../components/IncomeCard'
 const DashboardPage = () => {
   return (
     <>
-      <HeaderGreet />
-      <div className="card-grid">
-        <SavingsCard />
-        <ExpenseCard />
-        <IncomeCard />
-      </div>
+      <Navbar />
+      <Sidebar />
+      <main>
+        <div className="container">
+          <HeaderGreet />
+          <div className="card-grid">
+            <SavingsCard />
+            <ExpenseCard />
+            <IncomeCard />
+          </div>
 
-      <div className="tables">
-        <div className="table-transaction">
-          
-        </div>
-        <div className="table-notification">
+          <div className="tables">
+            <div className="table-transaction">
+              
+            </div>
+            <div className="table-notification">
 
-        </div>
-      </div>
+            </div>
+          </div>
+        </div>  
+      </main>
     </>
   )
 }
