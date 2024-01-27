@@ -246,6 +246,7 @@ select {
 .navbar .user-details p {
   font-weight: 600;
   margin-bottom: 3px;
+  text-transform: capitalize;
 }
 .navbar .user-details a {
   color: #1F50FF;
@@ -304,6 +305,9 @@ select {
   align-items: center;
   padding: 10px 12px;
 }
+.sidebar .account-directory .user-logout {
+  cursor: pointer;
+}
 .sidebar .account-directory .account-content {
   display: flex;
   gap: 10px;
@@ -321,6 +325,7 @@ select {
 }
 .sidebar .account-directory .account-details p {
   font-weight: 600;
+  text-transform: capitalize;
 }
 .sidebar .account-directory .account-details span {
   color: #1F50FF;

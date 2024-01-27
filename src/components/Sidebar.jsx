@@ -4,9 +4,12 @@ import iconLogOut from '../assets/icon-logout.svg'
 import { sidebarLinks } from '../constants'
 import { NavLink } from 'react-router-dom'
 import { useLogOut } from '../hooks/useLogOut'
+import { useGetUserInfo } from '../hooks/useGetUserInfo'
 
 
 const Sidebar = () => {
+  const { name, avatar } = useGetUserInfo()
+
   const { logOut } = useLogOut()
   const handleLogOut = () => {
     logOut()
@@ -35,13 +38,13 @@ const Sidebar = () => {
       {/* ACCOUNT DIRECTORY */}
       <div className='account-directory'>
         <div className="account-content">
-          <div className='user-avatar'>M</div>
+          <img src={avatar} alt={name} className='user-avatar'/>
           <div className="account-details">
-            <p>Mel John</p>
+            <p>{name}</p>
             <span>Admin</span>
           </div>
         </div>
-        <img src={iconLogOut} alt="Log out" onClick={handleLogOut}/>
+        <img src={iconLogOut} alt="Log out" onClick={handleLogOut} className='user-logout'/>
       </div>
     </div>
   )
