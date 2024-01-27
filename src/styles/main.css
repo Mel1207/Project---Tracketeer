@@ -272,19 +272,6 @@ select {
   display: block;
   margin-bottom: 65px;
 }
-.sidebar .link-item {
-  padding: 11px;
-  border-radius: 5px;
-  margin-bottom: 8px;
-  background: transparent;
-  transition: all 0.3s ease;
-}
-.sidebar .link-item:hover {
-  background: #1F50FF;
-}
-.sidebar .link-item:hover .sidebar-link {
-  color: #fff !important;
-}
 .sidebar .link-item.active {
   background: #1F50FF;
 }
@@ -294,6 +281,19 @@ select {
   align-items: center;
   color: #1E1E1E;
   font-weight: 600;
+  padding: 11px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.sidebar .sidebar-link:hover {
+  background: #1F50FF;
+  color: #fff;
+}
+.sidebar .sidebar-link.active {
+  background: #1F50FF;
+  color: #fff;
 }
 .sidebar .account-directory {
   width: 100%;
