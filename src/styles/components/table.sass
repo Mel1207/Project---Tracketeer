@@ -1,7 +1,7 @@
 .tables 
   display: grid
   grid-template-columns: 60% 1fr
-  height: 500px
+  // height: 500px
   gap: 20px
 
   .table-transaction 
@@ -9,18 +9,55 @@
     padding: 20px
     border: 1px solid rgba($cBlack, .10)
     border-radius: 10px
-    height: 100%
+    max-height: 475px
     width: 100%
+    overflow-y: auto
+
+    .table-title 
+      font-weight: 700
+
+  .table-head 
+    background: $cWhite20
+    display: grid 
+    grid-template-columns: repeat(3, 1fr)
+    padding: 10px 15px
+    border-radius: 5px 
+    margin-top: 20px
 
     p 
+      font-size: 14px
       font-weight: 700
+      text-align: center
+
+    p:nth-child(1)
+      text-align: left
+      
+    p:nth-child(3) 
+      text-align: right
+
+  .transaction-list 
+    li 
+      padding: 12px 15px
+      display: grid 
+      grid-template-columns: repeat(3, 1fr)
+      border-bottom: 1px solid rgba($cBlack, .10)
+      text-align: center 
+
+      p:nth-child(1)
+        text-align: left 
+
+      p:nth-child(3)
+        text-align: right
+
+    
 
   .table-notification
     background: $cWhite
     padding: 20px
     border: 1px solid rgba($cBlack, .10)
     border-radius: 10px
-    height: 100%
+    height: auto 
+    max-height: 475px
     width: 100%
 
     p 

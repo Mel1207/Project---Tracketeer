@@ -23,6 +23,8 @@ const DashboardPage = () => {
 
   const { addTransaction } = useAddTransaction()
 
+  // console.log(transactions)
+
   const handleSubmit = (e) => {
     e.preventDefault()
     addTransaction({
@@ -82,19 +84,32 @@ const DashboardPage = () => {
 
           <div className="tables">
             <div className="table-transaction">
-              <p>All Transactions</p>
-              <ul>
+              <p className='table-title'>All Transactions</p>
+              <div className='table-head'>
+                <p>Transaction</p>
+                <p>Type</p>
+                <p>Amount</p>
+              </div>
+              <ul className='transaction-list'>
                 {transactions.map(item => (
-                  <li key={item.id} style={{marginBottom: '20px'}}>
-                    <h5>{item.transactionDescription}</h5>
-                    <p>{item.transactionAmount}</p>
-                    <p>{item.transactionType}</p>
+                  <li key={item.id}>
+                    <p>{item.transactionDescription}</p>
+                    <p className={`${item.transactionType === 'expense' ? 'expense' : 'income'}`}>{item.transactionType}</p>
+                    <p>{item.transactionAmount}.00</p>
                   </li>
                 ))}
               </ul>
             </div>
             <div className="table-notification">
               <p>All Notification</p>
+              <ul>
+                {transactions.map(item => (
+                  <li key={item.id}>
+                    <p>{item.transactionDescription}</p>
+                  </li>
+                ))}
+                
+              </ul>
             </div>
           </div>
         </div>  

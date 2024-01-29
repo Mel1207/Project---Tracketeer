@@ -159,7 +159,6 @@ body {
 .tables {
   display: grid;
   grid-template-columns: 60% 1fr;
-  height: 500px;
   gap: 20px;
 }
 .tables .table-transaction {
@@ -167,18 +166,52 @@ body {
   padding: 20px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  height: 100%;
+  max-height: 475px;
   width: 100%;
+  overflow-y: auto;
 }
-.tables .table-transaction p {
+.tables .table-transaction .table-title {
   font-weight: 700;
+}
+.tables .table-head {
+  background: #F4F4F4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.tables .table-head p {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+.tables .table-head p:nth-child(1) {
+  text-align: left;
+}
+.tables .table-head p:nth-child(3) {
+  text-align: right;
+}
+.tables .transaction-list li {
+  padding: 12px 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.tables .transaction-list li p:nth-child(1) {
+  text-align: left;
+}
+.tables .transaction-list li p:nth-child(3) {
+  text-align: right;
 }
 .tables .table-notification {
   background: #fff;
   padding: 20px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  height: 100%;
+  height: auto;
+  max-height: 475px;
   width: 100%;
 }
 .tables .table-notification p {
@@ -382,6 +415,26 @@ main {
 .float-right {
   float: right;
   transform: translateY(-40px);
+}
+
+.expense {
+  font-size: 11px;
+  padding: 5px 10px;
+  background: #FF5271;
+  width: max-content;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.income {
+  font-size: 11px;
+  padding: 5px 10px;
+  background: #0BBE7E;
+  width: max-content;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 600px) {
