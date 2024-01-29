@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux' 
 import { modalClose, modalOpen } from '../../features/modalSlice'
 import { useAddTransaction } from '../../hooks/useAddTransaction'
+import { useGetTransactions } from '../../hooks/useGetTransactions'
 import Sidebar from '../../components/Sidebar'
 import Navbar from '../../components/Navbar'
 import Modal from '../../components/Modal'
@@ -9,10 +10,12 @@ import HeaderGreet from '../../components/HeaderGreet'
 import SavingsCard from '../../components/SavingsCard'
 import ExpenseCard from '../../components/ExpenseCard'
 import IncomeCard from '../../components/IncomeCard'
+import iconPlus from '../../assets/icon-plus.svg'
 
 
 const DashboardPage = () => {
   const dispatch = useDispatch()
+  const { transactions } = useGetTransactions()
   const modalState = useSelector(state => state.modal.isModalOpen)
   const [description, setDescription] = useState('') 
   const [amount, setAmount] = useState('')
@@ -68,7 +71,9 @@ const DashboardPage = () => {
       <main>
         <div className="container">
           <HeaderGreet />
-          <button className='btn btn-primary float-right' onClick={() => dispatch(modalOpen())}>Add Transaction</button>
+          <button className='btn btn-primary float-right' onClick={() => dispatch(modalOpen())}>
+            Add Transaction <img src={iconPlus} alt="add transaction" />
+          </button>
           <div className="card-grid">
             <SavingsCard />
             <ExpenseCard />
@@ -78,6 +83,15 @@ const DashboardPage = () => {
           <div className="tables">
             <div className="table-transaction">
               <p>All Transactions</p>
+              <ul>
+                {transactions.map(item => (
+                  <li key={item.id} style={{marginBottom: '20px'}}>
+                    <h5>{item.transactionDescription}</h5>
+                    <p>{item.transactionAmount}</p>
+                    <p>{item.transactionType}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
             <div className="table-notification">
               <p>All Notification</p>

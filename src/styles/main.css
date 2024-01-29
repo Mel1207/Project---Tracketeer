@@ -17,6 +17,9 @@ body {
 .btn-primary {
   background: #1F50FF;
   color: #fff;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .btn-secondary {
