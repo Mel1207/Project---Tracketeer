@@ -378,7 +378,7 @@ main {
 
 .float-right {
   float: right;
-  transform: translateY(-35px);
+  transform: translateY(-40px);
 }
 
 @media screen and (max-width: 600px) {

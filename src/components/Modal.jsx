@@ -13,13 +13,7 @@ const Modal = ({ children, modalTitle }) => {
           <h3>{modalTitle}</h3>
           <img src={iconClose} alt="Close" className='modal-close' onClick={() => dispatch(modalClose())}/>
         </div>
-        <div className="modal-content">
-          {children}
-        </div>
-        <div className="modal-footer">
-          <button className='btn btn-secondary'>Cancel</button>
-          <button className='btn btn-primary'>Submit</button>
-        </div>
+        {children}
       </div>
     </div>
   )
