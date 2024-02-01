@@ -11,15 +11,18 @@ import SavingsCard from '../../components/SavingsCard'
 import ExpenseCard from '../../components/ExpenseCard'
 import IncomeCard from '../../components/IncomeCard'
 import iconPlus from '../../assets/icon-plus.svg'
+import iconNoNotif from '../../assets/icon-no-notifications.svg'
+import iconNoTransaction from '../../assets/icon-no-transactions.svg'
 
 
 const DashboardPage = () => {
   const dispatch = useDispatch()
-  const { transactions } = useGetTransactions()
+  const { transactions, transactionsTotal } = useGetTransactions()
   const modalState = useSelector(state => state.modal.isModalOpen)
   const [description, setDescription] = useState('') 
   const [amount, setAmount] = useState('')
   const [transactionType, setTransactionType] = useState('expense')
+  const { balance, income, expense } = transactionsTotal
 
   const { addTransaction } = useAddTransaction()
 
@@ -77,9 +80,9 @@ const DashboardPage = () => {
             Add Transaction <img src={iconPlus} alt="add transaction" />
           </button>
           <div className="card-grid">
-            <SavingsCard />
-            <ExpenseCard />
-            <IncomeCard />
+            <SavingsCard totalBalance={balance}/>
+            <ExpenseCard totalExpense={expense}/>
+            <IncomeCard totalIncome={income}/>
           </div>
 
           <div className="tables">
@@ -90,7 +93,7 @@ const DashboardPage = () => {
                 <p>Type</p>
                 <p>Amount</p>
               </div>
-              <ul className='transaction-list'>
+              <ul className={transactions <= 0 ? 'empty-table' : 'transaction-list'}>
                 {transactions.map(item => (
                   <li key={item.id}>
                     <p>{item.transactionDescription}</p>
@@ -98,17 +101,36 @@ const DashboardPage = () => {
                     <p>{item.transactionAmount}.00</p>
                   </li>
                 ))}
+                {transactions <= 0 && (
+                  <div className='empty-transactions'>
+                    <img src={iconNoTransaction} alt="no transactions" />
+                    <span>No transactions yet</span>
+                  </div>
+                )}
               </ul>
             </div>
             <div className="table-notification">
-              <p>All Notification</p>
-              <ul>
+              <p className='title'>All Notification</p>
+              <ul className={transactions <= 0 ? 'empty-table' : ''}>
                 {transactions.map(item => (
-                  <li key={item.id}>
-                    <p>{item.transactionDescription}</p>
+                  <li key={item.id} className='item-notification'>
+                    <div>
+                      <p>{item.transactionDescription}</p>
+                      <p className='date'>{item.dateTs}</p>
+                    </div>
+                    <p className={`amount ${item.transactionType === 'expense' ? 'expense-type' : 'income-type'}`}>{item.transactionType === 'expense' ? (
+                      <span>-{item.transactionAmount}</span>
+                    ) : (
+                      <span>+{item.transactionAmount}</span>
+                    )}.00</p>
                   </li>
                 ))}
-                
+                {transactions <= 0 && (
+                  <div className='empty-notifications'>
+                    <img src={iconNoNotif} />
+                    <span>No notifications yet</span>
+                  </div>
+                )}
               </ul>
             </div>
           </div>

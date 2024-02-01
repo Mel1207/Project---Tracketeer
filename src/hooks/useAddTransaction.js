@@ -5,13 +5,14 @@ import { useGetUserInfo } from './useGetUserInfo'
 export const useAddTransaction = () => {
   const transactionCollectionRef = collection(db, "transactions")
   const { userId } = useGetUserInfo()
-  
-  // const createTs = serverTimestamp()
-  // const dateObj = new Date(createTs)
 
-  // const getYear = dateObj.getFullYear()
-  // const getMonth = dateObj.getMonth()
-  // const getDay = dateObj.getDate()
+  const currentDate = new Date();
+
+  const year = currentDate.getFullYear()
+  const month = (currentDate.getMonth() + 1).toString().padStart(2, '0')
+  const day = currentDate.getDate().toString().padStart(2, '0');
+
+  const formattedDate = `${year}/${month}/${day}`
 
   const addTransaction = async ({ 
       transactionDescription, 
@@ -23,6 +24,7 @@ export const useAddTransaction = () => {
       transactionDescription,
       transactionAmount,
       transactionType,
+      dateTs: formattedDate,
       createdAt: serverTimestamp()
     })
   }

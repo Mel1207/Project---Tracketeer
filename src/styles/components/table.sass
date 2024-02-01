@@ -1,8 +1,13 @@
 .tables 
   display: grid
   grid-template-columns: 60% 1fr
-  // height: 500px
   gap: 20px
+
+  .empty-table 
+    height: 350px
+    display: flex 
+    align-items: center
+    justify-content: center
 
   .table-transaction 
     background: $cWhite
@@ -42,14 +47,13 @@
       grid-template-columns: repeat(3, 1fr)
       border-bottom: 1px solid rgba($cBlack, .10)
       text-align: center 
+      align-items: center
 
       p:nth-child(1)
         text-align: left 
 
       p:nth-child(3)
         text-align: right
-
-    
 
   .table-notification
     background: $cWhite
@@ -59,6 +63,35 @@
     height: auto 
     max-height: 475px
     width: 100%
+    overflow-y: auto
 
-    p 
+    p.title 
       font-weight: 700
+      margin-bottom: 10px
+
+    .item-notification
+      padding: 10px 0
+      border-bottom: 1px solid rgba($cBlack, .10)
+      display: flex 
+      align-items: flex-end 
+      justify-content: space-between
+
+      p 
+        font-size: 16px
+        font-weight: 700
+
+      .date 
+        font-size: 12px
+        color: #7a7a7a
+        font-weight: 400
+        margin-top: 5px
+
+      .amount 
+        font-size: 12px
+        font-weight: 400
+
+      .expense-type 
+        color: $cRed 
+
+      .income-type
+        color: $cGreen

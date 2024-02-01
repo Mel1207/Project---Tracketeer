@@ -1,12 +1,12 @@
 import React from 'react'
 
-const SavingsCard = () => {
+const SavingsCard = ({ totalBalance }) => {
   return (
     <div className='card-savings'>
       <p>Current Savings</p>
 
       <div>
-        <h2>20,500.00</h2>
+        <h2>{totalBalance}.00</h2>
         <p>Pesos</p>
       </div>
     </div>
