@@ -108,12 +108,12 @@ const DashboardPage = () => {
               </ul>
             </div>
             <div className="table-notification">
-              <p className='title'>All Notification</p>
+              <p className='title'>All Notifications</p>
               <ul className={transactions <= 0 ? 'empty-table' : ''}>
                 {transactions.map(item => (
                   <li key={item.id} className='item-notification'>
                     <div>
-                      <p>{item.transactionDescription}</p>
+                      {item.transactionType === 'expense' ? ( <p>You got an expense activity 😢</p>) : (<p>You got income activity 😊</p>)}
                       <p className='date'>{item.dateTs}</p>
                     </div>
                     <p className={`amount ${item.transactionType === 'expense' ? 'expense-type' : 'income-type'}`}>{item.transactionType === 'expense' ? (
