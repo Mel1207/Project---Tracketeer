@@ -1,3 +1,43 @@
+.table 
+  padding: 20px 
+  border: 1px solid rgba($cBlack, .10)
+  border-radius: 10px
+  background: $cWhite
+
+  .table-head
+    background: $cWhite20
+    display: grid 
+    grid-template-columns: repeat(4, 1fr)
+    padding: 10px 15px
+    border-radius: 5px 
+    font-weight: 700
+
+  .table-row 
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    padding: 10px 15px
+    border-bottom: 1px solid rgba($cBlack, .10)
+    align-items: center
+
+  .table-income
+    font-size: 11px
+    padding: 5px 10px
+    background: $cGreen
+    width: max-content
+    color: #fff
+    border-radius: 20px
+
+  .table-expense
+    font-size: 11px
+    padding: 5px 10px
+    background: $cRed
+    width: max-content
+    color: #fff
+    border-radius: 20px
+
+  .table-date
+    color: $cGray
+  
 .tables 
   display: grid
   grid-template-columns: 60% 1fr

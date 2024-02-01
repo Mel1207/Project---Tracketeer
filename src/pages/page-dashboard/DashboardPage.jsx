@@ -23,10 +23,8 @@ const DashboardPage = () => {
   const [amount, setAmount] = useState('')
   const [transactionType, setTransactionType] = useState('expense')
   const { balance, income, expense } = transactionsTotal
-
   const { addTransaction } = useAddTransaction()
 
-  // console.log(transactions)
 
   const handleSubmit = (e) => {
     e.preventDefault()

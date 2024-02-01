@@ -156,6 +156,47 @@ body {
   font-size: 30px;
 }
 
+.table {
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: #fff;
+}
+.table .table-head {
+  background: #F4F4F4;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.table .table-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+.table .table-income {
+  font-size: 11px;
+  padding: 5px 10px;
+  background: #0BBE7E;
+  width: max-content;
+  color: #fff;
+  border-radius: 20px;
+}
+.table .table-expense {
+  font-size: 11px;
+  padding: 5px 10px;
+  background: #FF5271;
+  width: max-content;
+  color: #fff;
+  border-radius: 20px;
+}
+.table .table-date {
+  color: #7A7A7A;
+}
+
 .tables {
   display: grid;
   grid-template-columns: 60% 1fr;
