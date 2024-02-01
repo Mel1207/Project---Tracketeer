@@ -63,7 +63,7 @@ const DashboardPage = () => {
               </div>
             </div>
             <div className="modal-footer">
-              <button className='btn btn-secondary'>Cancel</button>
+              <button className='btn btn-secondary' type='button' onClick={() => dispatch(modalClose())}>Cancel</button>
               <button className='btn btn-primary'>Submit</button>
             </div>
           </form>
