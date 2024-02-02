@@ -660,6 +660,9 @@ main {
   .login-page .login-right {
     width: 100%;
   }
+  .tables .table-transaction, .tables .table-notification {
+    padding: 15px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
