@@ -13,7 +13,7 @@ const ExpenseHistoryPage = () => {
       <Sidebar />
       <main>
         <div className='container'>
-          <h3>Here's your Income history</h3>
+          <h3 className='page-title'>Expense history</h3>
             <div className='table'>
               <div className="table-head">
                 <p>Transaction</p>

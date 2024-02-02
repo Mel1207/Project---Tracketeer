@@ -559,6 +559,11 @@ main {
   border-radius: 20px;
 }
 
+.page-title {
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
 .empty-notifications, .empty-transactions {
   display: flex;
   flex-direction: column;
