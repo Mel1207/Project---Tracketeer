@@ -3,17 +3,14 @@ import logoMain from '../assets/logo-main.png'
 import iconLogOut from '../assets/icon-logout.svg'
 import { sidebarLinks } from '../constants'
 import { NavLink } from 'react-router-dom'
-import { useLogOut } from '../hooks/useLogOut'
 import { useGetUserInfo } from '../hooks/useGetUserInfo'
+import { useDispatch } from 'react-redux'
+import { modalLogOutOpen } from '../features/modalSlice'
 
 
 const Sidebar = () => {
   const { name, avatar } = useGetUserInfo()
-
-  const { logOut } = useLogOut()
-  const handleLogOut = () => {
-    logOut()
-  }
+  const dispatch = useDispatch()
 
   return (
     <div className='sidebar'>
@@ -44,7 +41,7 @@ const Sidebar = () => {
             <span>Admin</span>
           </div>
         </div>
-        <img src={iconLogOut} alt="Log out" onClick={handleLogOut} className='user-logout'/>
+        <img src={iconLogOut} alt="Log out" onClick={() => dispatch(modalLogOutOpen())} className='user-logout'/>
       </div>
     </div>
   )

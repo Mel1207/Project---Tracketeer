@@ -100,6 +100,17 @@ body {
 .modal .modal-content {
   margin-bottom: 50px;
 }
+.modal .logout-content {
+  margin: 40px 0;
+}
+.modal .logout-content img {
+  height: 40px;
+  display: block;
+  margin: 10px auto;
+}
+.modal .logout-content p {
+  text-align: center;
+}
 .modal .modal-footer {
   display: flex;
   justify-content: space-between;
