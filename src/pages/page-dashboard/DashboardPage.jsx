@@ -75,7 +75,7 @@ const DashboardPage = () => {
         <div className="container">
           <HeaderGreet />
           <button className='btn btn-primary float-right' onClick={() => dispatch(modalOpen())}>
-            Add Transaction <img src={iconPlus} alt="add transaction" />
+            <span>Add Transaction</span><img src={iconPlus} alt="add transaction" />
           </button>
           <div className="card-grid">
             <SavingsCard totalBalance={balance}/>

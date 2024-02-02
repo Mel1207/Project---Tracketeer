@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import logoMain from '../assets/logo-main.png'
+import logoMainActive from '../assets/icon-sidebar-main.png'
 import iconLogOut from '../assets/icon-logout.svg'
 import { sidebarLinks } from '../constants'
 import { NavLink } from 'react-router-dom'
@@ -16,7 +17,8 @@ const Sidebar = () => {
     <div className='sidebar'>
       <div>
         <a href="#!" aria-label='Tracketeer Link' className='sidebar-logo-link'>
-          <img src={logoMain} alt="Tracketeer Logo" />
+          <img src={logoMain} alt="Tracketeer Logo" className='logo-sidebar-open'/>
+          <img src={logoMainActive} alt="Tracketeer Logo" className='logo-sidebar-close'/>
         </a>
 
         {/* SIDEBAR LINKS */}
@@ -25,7 +27,7 @@ const Sidebar = () => {
             <li key={link.id} className='link-item'>
               <NavLink to={link.linkPath} className='sidebar-link'>
                 <img src={link.iconSrc} alt={link.title} />
-                {link.title}
+                <span>{link.title}</span>
               </NavLink>
             </li>
           ))}

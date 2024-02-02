@@ -430,6 +430,9 @@ select {
   display: block;
   margin-bottom: 65px;
 }
+.sidebar .sidebar-logo-link .logo-sidebar-close {
+  display: none;
+}
 .sidebar .link-item.active {
   background: #1F50FF;
 }
@@ -532,6 +535,7 @@ main {
   grid-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .float-right {
@@ -581,7 +585,75 @@ main {
   margin-top: 8px;
 }
 
+@media screen and (max-width: 1100px) {
+  .navbar {
+    padding-left: 80px;
+  }
+  .sidebar {
+    width: 77px;
+  }
+  .sidebar .sidebar-logo-link .logo-sidebar-open {
+    display: none;
+  }
+  .sidebar .sidebar-logo-link .logo-sidebar-close {
+    display: block;
+  }
+  .sidebar .sidebar-link span {
+    display: none;
+  }
+  .sidebar .account-directory {
+    justify-content: center;
+  }
+  .sidebar .account-directory .user-avatar {
+    display: none;
+  }
+  .sidebar .account-directory .account-details {
+    display: none;
+  }
+  main {
+    padding-left: 80px;
+  }
+  .card-grid {
+    grid-gap: 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .tables {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
+  .card-grid .card-savings, .card-grid .card-expense, .card-grid .card-income {
+    height: 150px;
+    padding: 10px;
+  }
+  .btn-primary span {
+    display: none;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+  .navbar {
+    padding-left: 0;
+  }
+  main {
+    padding-left: 0;
+  }
+  .card-grid .card-savings, .card-grid .card-expense, .card-grid .card-income {
+    height: 130px;
+  }
   .login-page .login-left {
     display: none;
   }
