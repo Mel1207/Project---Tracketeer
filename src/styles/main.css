@@ -306,6 +306,40 @@ body {
   color: #0BBE7E;
 }
 
+.profile-card {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  max-width: 550px;
+  margin: 0 auto;
+}
+.profile-card .avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+.profile-card .profile-name {
+  text-transform: capitalize;
+  margin-bottom: 3px;
+}
+.profile-card .profile-role {
+  color: #1F50FF;
+  font-weight: 700;
+}
+.profile-card .profile-details {
+  margin-top: 20px;
+}
+.profile-card .profile-details span {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.profile-card .profile-details span p {
+  font-weight: 700;
+}
+
 input, select {
   width: 100%;
   padding: 10px 12px;
