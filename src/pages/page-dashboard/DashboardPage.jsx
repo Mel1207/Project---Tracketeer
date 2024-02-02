@@ -19,12 +19,12 @@ const DashboardPage = () => {
   const dispatch = useDispatch()
   const { transactions, transactionsTotal } = useGetTransactions()
   const modalState = useSelector(state => state.modal.isModalOpen)
+  const sidebarState = useSelector(state => state.sidebar.isSideBarCollapsed)
   const [description, setDescription] = useState('') 
   const [amount, setAmount] = useState('')
   const [transactionType, setTransactionType] = useState('expense')
   const { balance, income, expense } = transactionsTotal
   const { addTransaction } = useAddTransaction()
-
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -71,7 +71,7 @@ const DashboardPage = () => {
       )}
       <Navbar />
       <Sidebar />
-      <main>
+      <main className={sidebarState ? 'main-sidebar-collapsed' : ''}>
         <div className="container">
           <HeaderGreet />
           <button className='btn btn-primary float-right' onClick={() => dispatch(modalOpen())}>

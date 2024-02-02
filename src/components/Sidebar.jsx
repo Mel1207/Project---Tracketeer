@@ -5,16 +5,17 @@ import iconLogOut from '../assets/icon-logout.svg'
 import { sidebarLinks } from '../constants'
 import { NavLink } from 'react-router-dom'
 import { useGetUserInfo } from '../hooks/useGetUserInfo'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { modalLogOutOpen } from '../features/modalSlice'
 
 
 const Sidebar = () => {
   const { name, avatar } = useGetUserInfo()
+  const sidebarState = useSelector(state => state.sidebar.isSideBarCollapsed)
   const dispatch = useDispatch()
 
   return (
-    <div className='sidebar'>
+    <div className={`sidebar ${sidebarState ? 'sidebar-collapsed' : ''}`}>
       <div>
         <a href="#!" aria-label='Tracketeer Link' className='sidebar-logo-link'>
           <img src={logoMain} alt="Tracketeer Logo" className='logo-sidebar-open'/>
