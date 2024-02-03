@@ -622,6 +622,7 @@ main {
   .navbar {
     padding-left: 80px;
   }
+
   .sidebar {
     width: 77px;
   }
@@ -643,9 +644,11 @@ main {
   .sidebar .account-directory .account-details {
     display: none;
   }
+
   main {
     padding-left: 80px;
   }
+
   .card-grid {
     grid-gap: 20px;
   }
@@ -653,6 +656,28 @@ main {
 @media screen and (max-width: 900px) {
   .tables {
     grid-template-columns: 1fr;
+  }
+
+  .sidebar-collapsed {
+    width: 280px;
+  }
+  .sidebar-collapsed .sidebar-link span {
+    display: block;
+  }
+  .sidebar-collapsed .account-directory {
+    justify-content: space-between;
+  }
+  .sidebar-collapsed .account-directory .account-details {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sidebar-collapsed .account-directory .user-avatar {
+    display: block;
+  }
+
+  .navbar-sidebar-collapsed {
+    padding-left: 280px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -664,12 +689,15 @@ main {
     height: 150px;
     padding: 10px;
   }
+
   .btn-primary span {
     display: none;
   }
+
   h1 {
     font-size: 20px;
   }
+
   p {
     font-size: 14px;
   }
@@ -678,21 +706,26 @@ main {
   .sidebar {
     display: none;
   }
+
   .navbar {
     padding-left: 0;
   }
+
   main {
     padding-left: 0;
   }
+
   .card-grid .card-savings, .card-grid .card-expense, .card-grid .card-income {
     height: 130px;
   }
+
   .login-page .login-left {
     display: none;
   }
   .login-page .login-right {
     width: 100%;
   }
+
   .tables .table-transaction, .tables .table-notification {
     padding: 15px;
   }
