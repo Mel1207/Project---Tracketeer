@@ -13,10 +13,15 @@ const Navbar = () => {
     dispatch(sidebarToggle())
   }
 
+  const toggleSidebarMobile = () => {
+    console.log('test')
+  }
+
   return (
     <nav className={`navbar ${sidebarState ? 'navbar-sidebar-collapsed' : ''}`}>
       <div className="navbar-container">
         <img src={iconHamburger} alt="Hamburger" className='hamburger' onClick={toggleSidebar}/>
+        <img src={iconHamburger} alt="Hamburger" className='hamburger-mobile' onClick={toggleSidebarMobile}/>
 
         <div className='user-account'>
           <img src={avatar} alt={name} className='user-avatar' />

@@ -710,8 +710,11 @@ main {
   .navbar {
     padding-left: 0;
   }
+  .navbar .hamburger {
+    display: none;
+  }
 
-  main {
+  main, .main-sidebar-collapsed {
     padding-left: 0;
   }
 
