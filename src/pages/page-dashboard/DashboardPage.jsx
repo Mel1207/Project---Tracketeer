@@ -13,6 +13,7 @@ import IncomeCard from '../../components/IncomeCard'
 import iconPlus from '../../assets/icon-plus.svg'
 import iconNoNotif from '../../assets/icon-no-notifications.svg'
 import iconNoTransaction from '../../assets/icon-no-transactions.svg'
+import SidebarMobile from '../../components/SidebarMobile'
 
 
 const DashboardPage = () => {
@@ -71,6 +72,7 @@ const DashboardPage = () => {
       )}
       <Navbar />
       <Sidebar />
+      {/* <SidebarMobile /> */}
       <main className={sidebarState ? 'main-sidebar-collapsed' : ''}>
         <div className="container">
           <HeaderGreet />

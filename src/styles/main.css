@@ -388,6 +388,10 @@ select {
 .navbar .hamburger {
   cursor: pointer;
 }
+.navbar .hamburger-mobile {
+  display: none;
+  cursor: pointer;
+}
 .navbar .user-account {
   display: flex;
   gap: 10px;
@@ -520,6 +524,90 @@ select {
 }
 .sidebar-collapsed .account-directory .account-details {
   display: none;
+}
+
+.sidebar-mobile {
+  height: 100vh;
+  width: 100%;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #F9FCFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+.sidebar-mobile .sidebar-logo-link {
+  height: 50px;
+  display: block;
+  margin-bottom: 65px;
+}
+.sidebar-mobile .sidebar-logo-link .logo-sidebar-close {
+  display: none;
+}
+.sidebar-mobile .link-item.active {
+  background: #1F50FF;
+}
+.sidebar-mobile .sidebar-link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #1E1E1E;
+  font-weight: 600;
+  padding: 11px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.sidebar-mobile .sidebar-link:hover {
+  background: #1F50FF;
+  color: #fff;
+}
+.sidebar-mobile .sidebar-link.active {
+  background: #1F50FF;
+  color: #fff;
+}
+.sidebar-mobile .account-directory {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+}
+.sidebar-mobile .account-directory .user-logout {
+  cursor: pointer;
+}
+.sidebar-mobile .account-directory .account-content {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.sidebar-mobile .account-directory .user-avatar {
+  height: 40px;
+  width: 40px;
+  background: #1F50FF;
+  color: #fff;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar-mobile .account-directory .account-details p {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.sidebar-mobile .account-directory .account-details span {
+  color: #1F50FF;
+  font-weight: 700;
+  font-size: 12px;
 }
 
 *, html {
@@ -712,6 +800,9 @@ main {
   }
   .navbar .hamburger {
     display: none;
+  }
+  .navbar .hamburger-mobile {
+    display: block;
   }
 
   main, .main-sidebar-collapsed {
