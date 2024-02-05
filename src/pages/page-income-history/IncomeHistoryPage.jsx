@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../components/Navbar'
 import Sidebar from '../../components/Sidebar'
 import { useGetTransactions } from '../../hooks/useGetTransactions'
+import SidebarMobile from '../../components/SidebarMobile'
 
 const IncomeHistoryPage = () => {
   const { transactions } = useGetTransactions()
@@ -11,6 +12,7 @@ const IncomeHistoryPage = () => {
     <>
       <Navbar />
       <Sidebar />
+      <SidebarMobile />
       <main>
         <div className='container'>
           <h3 className='page-title'>Income history</h3>

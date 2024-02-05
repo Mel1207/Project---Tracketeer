@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../components/Navbar'
 import Sidebar from '../../components/Sidebar'
 import { useGetUserInfo } from '../../hooks/useGetUserInfo'
+import SidebarMobile from '../../components/SidebarMobile'
 
 const ProfilePage = () => {
   const { name, userId, avatar } = useGetUserInfo()
@@ -10,6 +11,7 @@ const ProfilePage = () => {
     <>
       <Navbar />
       <Sidebar />
+      <SidebarMobile />
       <main>
         <div className='container'>
           <div className="profile-card">

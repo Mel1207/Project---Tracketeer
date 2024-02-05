@@ -30,14 +30,12 @@ const SidebarMobile = () => {
           </a>
           <img src={iconBack} alt="back" onClick={handleClose} />
         </div>
-       
         
-
         {/* SIDEBAR LINKS */}
         <ul className='sidebar-links'>
           {sidebarLinks.map(link => (
             <li key={link.id} className='link-item'>
-              <NavLink to={link.linkPath} className='sidebar-link'>
+              <NavLink to={link.linkPath} className='sidebar-link' onClick={() => dispatch(sidebarMobileClose())}>
                 <img src={link.iconSrc} alt={link.title} />
                 <span>{link.title}</span>
               </NavLink>
