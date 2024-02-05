@@ -526,14 +526,19 @@ select {
   display: none;
 }
 
+.sidebar-mobile-pull {
+  left: 0 !important;
+  transition: all 0.3s ease;
+}
+
 .sidebar-mobile {
   height: 100vh;
-  width: 100%;
+  width: 280px;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   padding: 20px 15px;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100%;
   background: #F9FCFF;
   display: flex;
   flex-direction: column;
@@ -541,10 +546,18 @@ select {
   transition: all 0.3s ease;
   z-index: 20;
 }
+.sidebar-mobile .sidebar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
 .sidebar-mobile .sidebar-logo-link {
   height: 50px;
   display: block;
-  margin-bottom: 65px;
+}
+.sidebar-mobile .sidebar-logo-link .logo-sidebar-open {
+  margin-left: -5px;
 }
 .sidebar-mobile .sidebar-logo-link .logo-sidebar-close {
   display: none;
@@ -710,7 +723,6 @@ main {
   .navbar {
     padding-left: 80px;
   }
-
   .sidebar {
     width: 77px;
   }
@@ -732,11 +744,9 @@ main {
   .sidebar .account-directory .account-details {
     display: none;
   }
-
   main {
     padding-left: 80px;
   }
-
   .card-grid {
     grid-gap: 20px;
   }
@@ -745,7 +755,6 @@ main {
   .tables {
     grid-template-columns: 1fr;
   }
-
   .sidebar-collapsed {
     width: 280px;
   }
@@ -763,7 +772,6 @@ main {
   .sidebar-collapsed .account-directory .user-avatar {
     display: block;
   }
-
   .navbar-sidebar-collapsed {
     padding-left: 280px;
   }
@@ -777,15 +785,12 @@ main {
     height: 150px;
     padding: 10px;
   }
-
   .btn-primary span {
     display: none;
   }
-
   h1 {
     font-size: 20px;
   }
-
   p {
     font-size: 14px;
   }
@@ -794,7 +799,6 @@ main {
   .sidebar {
     display: none;
   }
-
   .navbar {
     padding-left: 0;
   }
@@ -804,22 +808,18 @@ main {
   .navbar .hamburger-mobile {
     display: block;
   }
-
   main, .main-sidebar-collapsed {
     padding-left: 0;
   }
-
   .card-grid .card-savings, .card-grid .card-expense, .card-grid .card-income {
     height: 130px;
   }
-
   .login-page .login-left {
     display: none;
   }
   .login-page .login-right {
     width: 100%;
   }
-
   .tables .table-transaction, .tables .table-notification {
     padding: 15px;
   }

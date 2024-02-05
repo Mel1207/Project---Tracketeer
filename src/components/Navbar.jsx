@@ -3,7 +3,7 @@ import iconHamburger from '../assets/icon-hamburger.svg'
 import { NavLink } from 'react-router-dom'
 import { useGetUserInfo } from '../hooks/useGetUserInfo'
 import { useDispatch, useSelector } from 'react-redux'
-import { sidebarToggle } from '../features/sidebarSlice'
+import { sidebarMobileOpen, sidebarToggle } from '../features/sidebarSlice'
 
 const Navbar = () => {
   const { name, avatar } = useGetUserInfo()
@@ -15,6 +15,7 @@ const Navbar = () => {
 
   const toggleSidebarMobile = () => {
     console.log('test')
+    dispatch(sidebarMobileOpen())
   }
 
   return (

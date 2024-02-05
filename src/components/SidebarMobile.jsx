@@ -7,19 +7,31 @@ import { NavLink } from 'react-router-dom'
 import { useGetUserInfo } from '../hooks/useGetUserInfo'
 import { useDispatch, useSelector } from 'react-redux'
 import { modalLogOutOpen } from '../features/modalSlice'
+import iconBack from '../assets/icon-back.svg'
+import { sidebarMobileClose } from '../features/sidebarSlice'
 
 
 const SidebarMobile = () => {
   const { name, avatar } = useGetUserInfo()
   const dispatch = useDispatch()
+  const sidebarMobileState = useSelector(state => state.sidebar.isSideBarMobileCollapsed)
+
+  const handleClose = () => {
+    dispatch(sidebarMobileClose())
+  }
 
   return (
-    <div className='sidebar-mobile'>
+    <div className={`sidebar-mobile ${sidebarMobileState ? 'sidebar-mobile-pull' : ''}`}>
       <div>
-        <a href="#!" aria-label='Tracketeer Link' className='sidebar-logo-link'>
-          <img src={logoMain} alt="Tracketeer Logo" className='logo-sidebar-open'/>
-          <img src={logoMainActive} alt="Tracketeer Logo" className='logo-sidebar-close'/>
-        </a>
+        <div className='sidebar-top'>
+          <a href="#!" aria-label='Tracketeer Link' className='sidebar-logo-link'>
+            <img src={logoMain} alt="Tracketeer Logo" className='logo-sidebar-open'/>
+            {/* <img src={logoMainActive} alt="Tracketeer Logo" className='logo-sidebar-close'/> */}
+          </a>
+          <img src={iconBack} alt="back" onClick={handleClose} />
+        </div>
+       
+        
 
         {/* SIDEBAR LINKS */}
         <ul className='sidebar-links'>

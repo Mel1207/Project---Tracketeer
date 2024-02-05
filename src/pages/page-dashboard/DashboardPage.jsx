@@ -72,7 +72,7 @@ const DashboardPage = () => {
       )}
       <Navbar />
       <Sidebar />
-      {/* <SidebarMobile /> */}
+      <SidebarMobile />
       <main className={sidebarState ? 'main-sidebar-collapsed' : ''}>
         <div className="container">
           <HeaderGreet />
