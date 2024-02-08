@@ -5,11 +5,10 @@ import { signInWithPopup } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
 import bgLogin from '../../assets/img-login-bg.jpg'
 import loginLogo from '../../assets/icon-login.png'
-import { useGetUserInfo } from '../../hooks/useGetUserInfo'
+// import { useGetUserInfo } from '../../hooks/useGetUserInfo'
 
 const Auth = () => {
   const navigate = useNavigate()
-  const { isAuth } = useGetUserInfo()
 
   const handleSignInGoogle = async () => {
     const results = await signInWithPopup(auth, provider)
@@ -24,12 +23,6 @@ const Auth = () => {
     localStorage.setItem('auth', JSON.stringify(authInfo))
     navigate('/dashboard')
   }
-
-  useEffect(() => {
-    if(isAuth) {
-      navigate('/dashboard')
-    }
-  })
 
   return (
     <div className='login-page'>
