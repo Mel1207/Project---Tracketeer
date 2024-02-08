@@ -36,7 +36,8 @@ const SidebarMobile = () => {
           {sidebarLinks.map(link => (
             <li key={link.id} className='link-item'>
               <NavLink to={link.linkPath} className='sidebar-link' onClick={() => dispatch(sidebarMobileClose())}>
-                <img src={link.iconSrc} alt={link.title} />
+                <img src={link.iconSrc} alt={link.title} className='default-icon'/>
+                <img src={link.iconSrcActive} alt={link.title} className='active-icon'/>
                 <span>{link.title}</span>
               </NavLink>
             </li>

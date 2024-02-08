@@ -596,9 +596,24 @@ select {
   background: #1F50FF;
   color: #fff;
 }
+.sidebar-mobile .sidebar-link:hover .default-icon {
+  display: none;
+}
+.sidebar-mobile .sidebar-link:hover .active-icon {
+  display: block;
+}
+.sidebar-mobile .sidebar-link .active-icon {
+  display: none;
+}
 .sidebar-mobile .sidebar-link.active {
   background: #1F50FF;
   color: #fff;
+}
+.sidebar-mobile .sidebar-link.active .active-icon {
+  display: block;
+}
+.sidebar-mobile .sidebar-link.active .default-icon {
+  display: none;
 }
 .sidebar-mobile .account-directory {
   width: 100%;
