@@ -14,6 +14,7 @@ const Sidebar = () => {
   const sidebarState = useSelector(state => state.sidebar.isSideBarCollapsed)
   const dispatch = useDispatch()
 
+
   return (
     <div className={`sidebar ${sidebarState ? 'sidebar-collapsed' : ''}`}>
       <div>
@@ -27,7 +28,8 @@ const Sidebar = () => {
           {sidebarLinks.map(link => (
             <li key={link.id} className='link-item'>
               <NavLink to={link.linkPath} className='sidebar-link'>
-                <img src={link.iconSrc} alt={link.title} />
+                <img src={link.iconSrc} alt="" className='default-icon'/>
+                <img src={link.iconSrcActive} alt="" className='active-icon'/>
                 <span>{link.title}</span>
               </NavLink>
             </li>
