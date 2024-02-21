@@ -17,8 +17,11 @@ import SidebarMobile from '../../components/SidebarMobile'
 
 
 const DashboardPage = () => {
+  // HOOKS CALL
   const dispatch = useDispatch()
   const { transactions, transactionsTotal } = useGetTransactions()
+
+  // GLOBAL STATE
   const modalState = useSelector(state => state.modal.isModalOpen)
   const sidebarState = useSelector(state => state.sidebar.isSideBarCollapsed)
   const [description, setDescription] = useState('') 
